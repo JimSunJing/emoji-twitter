@@ -64,9 +64,11 @@ const Feed = () => {
 
   if (postLoading) return <LoadingPage />;
 
+  if (!data) return <div>Some thing Went Wrong</div>;
+
   return (
     <div className="flex flex-col">
-      {data?.map((fullPost) => (
+      {data.map((fullPost) => (
         <PostView {...fullPost} key={fullPost.post.id} />
       ))}
     </div>
