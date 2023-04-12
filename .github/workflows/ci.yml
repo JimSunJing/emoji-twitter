@@ -3,7 +3,7 @@ name: CI
 on: [push, pull_request]
 
 env:
-  MY_ENV_VAR: "my_value"
+  DATABASE_URL: "http://fack.ai"
 
 jobs:
   build:
@@ -20,6 +20,3 @@ jobs:
 
       - name: Lint
         run: npm run lint
-
-      - name: Print environment variable
-        run: echo $MY_ENV_VAR
